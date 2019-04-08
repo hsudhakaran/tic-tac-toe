@@ -29,12 +29,13 @@
               {% if game[i][j]!="None" %}
                 {{ game[i][j] }}
               {% else %}
-                <a href="{{ url_for('play', row=i, col=j) }}">Play if {{turn}} here</a>
+                <a href="{{ url_for('play', row=i, col=j)}}">Play {{turn}} here</a>
               {% endif %}
             </td>
           {% endfor %}
         </tr>
       {% endfor %}
     </table>
+    <a href="{{ url_for('reset')}}">Reset Game</a>
   </body>
 </html>
